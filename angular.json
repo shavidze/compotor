@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "compotor"
+    }
+  },
+  "defaultProject": "compotor",
+  "cli": {
+    "analytics": "bd21566d-f6c2-4277-bdd2-0a965ed3f8f6"
+  }
 }
