@@ -46,7 +46,6 @@ export class AppComponent {
   title = 'compotor';
 
   getPage(outlet) {
-    console.log(outlet.activatedRouteData);
     return outlet.activatedRouteData['page'] || 'home';
   }
 }
