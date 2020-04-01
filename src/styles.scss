@@ -36,12 +36,13 @@ body {
 
 body {
   min-width: 320px;
+  font-family: "Oswald", sans-serif;
 }
 
 .wrapper {
   min-height: 100%;
   position: relative;
-  padding-top: 70px;
+  padding-top: 18px;
   padding-bottom: 60px;
 }
 
@@ -107,4 +108,60 @@ li {
       }
     }
   }
+}
+
+@mixin make-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.abs-center {
+  @include make-center();
+}
+
+.main-bcground {
+  position: relative;
+  font-family: "Comic Neue", cursive;
+  p {
+    color: $light;
+    font-size: 28px;
+    animation: incomming-text 3s linear;
+  }
+  img {
+    max-height: 700px;
+    height: 100%;
+  }
+  .btn {
+    color: $light;
+    border: 1px solid $light;
+    outline: none;
+    &:hover {
+      background: $light;
+      color: $dark-primary;
+      transition: all 0.5s cubic-bezier(0, 0, 0.82, 1.07);
+    }
+  }
+}
+
+/*Animations Start*/
+@keyframes incomming-text {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+//buttons
+
+.btn-light {
+  color: white;
+}
+.btn-transparent {
+  background: transparent;
 }

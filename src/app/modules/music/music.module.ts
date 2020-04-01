@@ -7,6 +7,6 @@ import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [MusicComponent],
-  imports: [CommonModule, SharedModule, MusicRoutingModule]
+  imports: [CommonModule, MusicRoutingModule]
 })
 export class MusicModule {}
