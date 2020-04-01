@@ -28,6 +28,11 @@ const routes: Routes = [
           import('./modules/music/music.module').then(m => m.MusicModule)
       }
     ]
+  },
+  {
+    path: 'videos',
+    loadChildren: () =>
+      import('./modules/videos/videos.module').then(m => m.VideosModule)
   }
 ];
 @NgModule({

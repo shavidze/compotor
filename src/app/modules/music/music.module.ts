@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { MusicRoutingModule } from './music-routing.module';
 import { MusicComponent } from './music.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [MusicComponent],
-  imports: [CommonModule, MusicRoutingModule]
+  imports: [CommonModule, SharedModule, MusicRoutingModule]
 })
 export class MusicModule {}
