@@ -47,11 +47,12 @@ body {
 }
 
 ul {
-  list-style-type: none;
+  list-style-type: none !important;
   color: $light;
 }
 li {
-  text-decoration: none;
+  text-decoration: none !important;
+  outline: none !important;
 }
 .navbar {
   display: flex;
@@ -123,19 +124,26 @@ li {
 .main-bcground {
   position: relative;
   font-family: "Comic Neue", cursive;
+  height: 700px;
+  max-height: 100%;
+  margin: auto;
   p {
     color: $light;
     font-size: 28px;
-    animation: incomming-text 3s linear;
+    animation: incomming-text 4s infinite;
   }
   img {
-    max-height: 700px;
+    position: absolute;
+    top: 0;
+    opacity: 0;
     height: 100%;
+    animation: img-slides 4s infinite;
   }
   .btn {
     color: $light;
     border: 1px solid $light;
-    outline: none;
+    outline: none !important;
+    box-shadow: none !important;
     &:hover {
       background: $light;
       color: $dark-primary;
@@ -149,9 +157,16 @@ li {
   0% {
     opacity: 0;
   }
-  50% {
-    opacity: 0.5;
+  100% {
+    opacity: 1;
   }
+}
+
+@keyframes img-slides {
+  0% {
+    opacity: 0;
+  }
+
   100% {
     opacity: 1;
   }

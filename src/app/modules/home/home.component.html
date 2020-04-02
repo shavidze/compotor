@@ -1,13 +1,17 @@
 <div class="main-bcground">
-  <img
-    src="../../../assets/images/main-background.jpg"
-    alt=""
-    srcset=""
-    sizes="(max-width:760px) 100vw"
-    class="w-100"
-  />
+  <ng-container *ngFor="let id of sliderItems; let i = index">
+    <img
+      [ngStyle]="{ visibility: id === counter ? 'visible' : 'hidden' }"
+      src="../../../assets/images/main-background-{{ id }}.jpg"
+      alt=""
+      srcset=""
+      sizes="(max-width:760px) 100vw"
+      class="w-100"
+    />
+  </ng-container>
+
   <div class="abs-center d-flex flex-column justify-content-center ">
     <p class="">Listen Latest Music</p>
-    <button type="button" class="btn btn-transparent">Discover</button>
+    <button type="button" class="btn btn-transparent ">Discover</button>
   </div>
 </div>
