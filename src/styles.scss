@@ -111,6 +111,9 @@ li {
   }
 }
 
+/*
+======== mixins =======
+*/
 @mixin make-center {
   position: absolute;
   left: 50%;
@@ -121,6 +124,9 @@ li {
   @include make-center();
 }
 
+/*
+======== home content  =======
+*/
 .main-bcground {
   position: relative;
   font-family: "Comic Neue", cursive;
@@ -152,7 +158,7 @@ li {
   }
 }
 
-/*Animations Start*/
+/*======== animations======*/
 @keyframes incomming-text {
   0% {
     opacity: 0;
@@ -172,7 +178,7 @@ li {
   }
 }
 
-//buttons
+/* buttons*/
 
 .btn-light {
   color: white;
