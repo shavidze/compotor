@@ -1,7 +1,7 @@
 <div class="main-bcground">
   <ng-container *ngFor="let id of sliderItems; let i = index">
     <img
-      [ngStyle]="{ visibility: id === counter ? 'visible' : 'hidden' }"
+      *ngIf="id === counter"
       src="../../../assets/images/main-background-{{ id }}.jpg"
       alt=""
       srcset=""

@@ -8,7 +8,7 @@ import { BehaviorSubject, interval, timer } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
   constructor() {}
-  sliderItems = [0, 1, 2, 3, 4, 5];
+  sliderItems = [0, 1, 2];
   counter = 0;
   tm = interval(4000);
   ngOnInit(): void {
@@ -24,3 +24,8 @@ export class HomeComponent implements OnInit {
     }
   }
 }
+
+// [ngStyle]="{
+//   visibility: id === counter ? 'visible' : 'hidden',
+//   opacity: 0
+// }"
