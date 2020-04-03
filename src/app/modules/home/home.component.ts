@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject, interval, timer } from 'rxjs';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
   sliderItems = [0, 1, 2];
   counter = 0;
   tm = interval(4000);
+
+  constructor() {}
   ngOnInit(): void {
     this.tm.subscribe(() => {
       this.showNextImage();
