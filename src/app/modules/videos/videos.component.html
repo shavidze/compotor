@@ -1,5 +1,5 @@
-<div class="video-player" data-state="small">
-  <div class="video-player__details">
+<div id="app" data-state="small">
+  <div class="details">
     <h1>In Your Mind</h1>
     <p>
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -8,20 +8,20 @@
       make a type specimen book. It has survived not
     </p>
   </div>
+
   <figure class="hero">
-    <div class="hero__inner">
+    <div class="hero-inner">
       <img
-        src="../../../assets/images/main-background-1.jpg"
-        alt="hero"
-        class="hero__image"
+        class="hero-image"
+        src="https://source.unsplash.com/so5nsYDOdxw/1200x600"
       />
     </div>
-    <div class="btn-play"></div>
+    <div class="play" (^click)="listenPlay()"></div>
     <figcaption class="hero-details">
-      <div class="hero-details__inner">
+      <div class="hero-details-inner">
         <div class="graph"></div>
+        <strong>Vote: 9/10 </strong>
       </div>
-      <strong class="votion-txt">Vote: 9/10</strong>
     </figcaption>
   </figure>
 </div>
