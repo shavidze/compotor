@@ -1,4 +1,10 @@
-import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ElementRef,
+  HostListener,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-videos',
@@ -8,6 +14,7 @@ import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
 export class VideosComponent implements OnInit {
   elApp: any;
   elPlay: any;
+
   machine = {
     initial: 'small',
     states: {
@@ -17,6 +24,9 @@ export class VideosComponent implements OnInit {
     },
   };
 
+  isPlaying: boolean = false;
+
+  @ViewChild('videoPlayer', { static: false }) vieoPlayer: ElementRef;
   constructor() {}
 
   ngOnInit(): void {}
@@ -34,6 +44,8 @@ export class VideosComponent implements OnInit {
       if (e.target.className === 'play') {
         return this.listenPlay();
       }
+      this.isPlaying = false;
+      this.vieoPlayer.nativeElement.load();
       return this.activate(this.transition(this.elApp.dataset.state, e.type));
     });
   }
@@ -41,6 +53,8 @@ export class VideosComponent implements OnInit {
   listenPlay(): void {
     const state = this.elApp.dataset.state;
     this.activate(this.transition(state, 'play'));
+    this.vieoPlayer.nativeElement.play();
+    this.isPlaying = true;
   }
 
   activate(state) {

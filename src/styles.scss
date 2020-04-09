@@ -306,6 +306,13 @@ li {
   height: 100%;
   transition: inherit;
   overflow: hidden;
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: none;
+    transition: inherit;
+  }
 }
 
 .hero-image {
@@ -465,7 +472,9 @@ li {
     -webkit-transform: translateY(-200%);
     opacity: 0;
   }
-
+  video {
+    display: none;
+  }
   .hero-details {
     transition-delay: calc(($duration));
   }
@@ -495,7 +504,11 @@ li {
   .hero {
     transform: scale(1.2);
     cursor: pointer;
+    video {
+      transform: scale(0.9);
+    }
   }
+
   .details {
     transform: translateY(-200%);
     opacity: 0;
